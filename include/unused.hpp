@@ -40,4 +40,5 @@ void Unused(T...) {}
 
 } // namespace yacppml
 
+// UNUSED macro with varying number of arguments to avoid "unused variable" warnings.
 #define UNUSED(...) (void)decltype(::yacppml::unused::Unused(__VA_ARGS__))()

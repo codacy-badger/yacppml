@@ -1,4 +1,4 @@
-// unused example
+// cpp_attributes example
 //
 // Licensed under the MIT License <http://opensource.org/licenses/MIT>.
 // Copyright (c) 2018 Daniil Goncharov <neargye@gmail.com>.
@@ -21,16 +21,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE  OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include <unused.hpp>
+#include <cpp_attributes.hpp>
+
+void foo(CPP_ATTRIBUTE_UNUSED int i) {} // No warning: unused parameter 'i'.
 
 int main() {
-  int a = 0;
-  float b = 0.0f;
-  char c[] = "test";
-  UNUSED(a, b, c); // No warning: unused variable 'a', 'b', 'c'.
-
-  int d = 0;
-  UNUSED(d); // No warning: unused variable 'd'.
+  CPP_ATTRIBUTE_UNUSED int a = 0; // No warning: unused variable 'a'.
 
   return 0;
 }
